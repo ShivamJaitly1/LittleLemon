@@ -1,61 +1,86 @@
-**Little Lemon Web App** <br />
-The Little Lemon web app is a restaurant management platform where users can manage menu items, handle bookings, and authenticate themselves to access restricted resources. It is built using Django for the backend and Django REST Framework for API functionalities.
-<br />
-<br />
-<br />
-**Features**<br />
-  **Menu Management:** Add, view, and manage menu items.<br />
-  **Booking Management:** Make and manage bookings for customers.<br />
-  **Authentication:** Users can sign up, log in, and access protected API endpoints.<br />
-  **API Access:** The app exposes RESTful APIs for interacting with menu and booking data.<br />
-  **Testing:** The app comes with pre-configured unit tests to ensure the reliability of the features.<br />
-<br />
-<br />
-<br />
-**Technologies Used**<br />
-**Django:** A high-level Python web framework for backend development.<br />
-**Django REST Framework (DRF):** A powerful toolkit for building APIs in Django.<br />
-**Djoser:** A library for handling user authentication with token-based authentication.<br />
-**MySQL:** The database used to store app data, including menu items and bookings.<br />
-**Insomnia/Postman:** Tools used to test the APIs.<br />
-<br />
-<br />
-<br />
-**Installation**<br />
-**Clone the repository:**<br />
+# **Little Lemon Web App**  
+The **Little Lemon Web App** is a restaurant management platform that allows users to manage menu items, handle bookings, and authenticate themselves to access restricted resources. It is built using **Django** for the backend and **Django REST Framework (DRF)** for API functionalities.  
 
+---
 
-**Navigate to the project directory:**<br />
-cd little-lemon<br />
+## **Features**  
+✅ **Menu Management** – Add, view, and manage menu items.  
+✅ **Booking Management** – Make and manage bookings for customers.  
+✅ **Authentication** – Users can sign up, log in, and access protected API endpoints.  
+✅ **API Access** – Exposes RESTful APIs for interacting with menu and booking data.  
+✅ **Testing** – Pre-configured unit tests ensure the reliability of features.  
 
-**Create a virtual environment and activate it:**<br />
-python -m venv venv<br />
-source venv/bin/activate<br />
+---
 
-**Set up the database:**<br />
+## **Technologies Used**  
+- **Django** – High-level Python web framework for backend development.  
+- **Django REST Framework (DRF)** – Powerful toolkit for building APIs in Django.  
+- **Djoser** – Handles user authentication with token-based authentication.  
+- **MySQL** – Stores app data, including menu items and bookings.  
+- **Insomnia/Postman** – Tools for testing APIs.  
 
-**Configure your MySQL database settings in settings.py (under DATABASES).<br />
-Run migrations:**<br />
-python manage.py migrate<br />
+---
 
-**Create a superuser to access the Django Admin:**<br />
-python manage.py createsuperuser<br />
+## **Installation**  
 
-**Run the development server:**<br />
-python manage.py runserver<br />
+### **1. Clone the repository**  
+```bash
+git clone <repository-url>
+cd little-lemon
+```
 
-<br />
-<br />
-<br />
+### **2. Create a virtual environment and activate it**  
+```bash
+python -m venv venv  
+source venv/bin/activate  # On macOS/Linux  
+venv\Scripts\activate     # On Windows  
+```
 
-**Testing the API** <br />
-You can test the API using tools like Insomnia or Postman. Use the following endpoints for testing:<br />
+### **3. Install dependencies**  
+```bash
+pip install -r requirements.txt  
+```
 
-**Menu API:** /api/menu/ (GET, POST)<br />
-**Booking API:** /api/bookings/ (GET, POST)<br />
-**User Authentication:** /auth/token/login/, /auth/token/logout/<br />
-To authenticate a user, obtain the token from the /auth/token/login/ endpoint and include it in the Authorization header as Bearer <token> in subsequent requests.<br />
+### **4. Set up the database**  
+- Configure your **MySQL database settings** in `settings.py` under `DATABASES`.  
 
-**Unit Testing**<br />
-Unit tests are written using Django's TestCase class. To run the tests, use the following command:<br />
-python manage.py test<br />
+### **5. Run migrations**  
+```bash
+python manage.py migrate  
+```
+
+### **6. Create a superuser to access Django Admin**  
+```bash
+python manage.py createsuperuser  
+```
+
+### **7. Run the development server**  
+```bash
+python manage.py runserver  
+```
+
+---
+
+## **Testing the API**  
+You can test the API using **Insomnia** or **Postman**.  
+
+### **Endpoints:**  
+🔹 **Menu API:** `/api/menu/` (GET, POST)  
+🔹 **Booking API:** `/api/bookings/` (GET, POST)  
+🔹 **User Authentication:**  
+  - Login: `/auth/token/login/`  
+  - Logout: `/auth/token/logout/`  
+
+🔹 **Authentication:**  
+To authenticate a user, obtain the token from `/auth/token/login/` and include it in the **Authorization header** as `Bearer <your_token>` for subsequent requests.  
+
+---
+
+## **Unit Testing**  
+Unit tests are written using Django’s `TestCase` class. To run the tests, use:  
+```bash
+python manage.py test  
+```
+
+---
+
